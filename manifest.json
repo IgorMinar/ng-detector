@@ -24,5 +24,9 @@
     },
 
     "default_title": "AngularJS Super-Powered"
-  }
+  },
+
+  "web_accessible_resources": [
+    "inject.js"
+  ]
 }
