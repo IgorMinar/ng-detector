@@ -1,0 +1,8 @@
+.DS_Store
+*~
+*.swp
+.idea
+.agignore
+.lvimrc
+ng-detector.zip
+
