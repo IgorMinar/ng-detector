@@ -12,7 +12,7 @@
   }
 
   sendMessage({
-    angular: window.angular ? window.angular.version : { full: 'Powered by Angular' }
+    angularVersion: window.angular ? window.angular.version : {}
   });
 
   // remove elements from page

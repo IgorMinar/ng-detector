@@ -7,12 +7,20 @@ chrome.runtime.onMessage.addListener(
         request = JSON.parse(request);
       } catch (e) {}
     }
-    if (request.angular) {
+
+    var versionObject = request.angularVersion;
+
+    if (versionObject) {
+      var version = versionObject.codeName
+                    ? 'AngularJS ' + versionObject.full + '\n' + versionObject.codeName
+                    : 'Angular'; // maybe AngularDart or lazy-loaded AngularJS?
+
       chrome.pageAction.show(sender.tab.id);
       chrome.pageAction.setTitle({
         tabId: sender.tab.id,
-        title: request.angular.full
+        title: 'Super-powered by \n' + version
       });
-      console.log('Angular found at:', sender.tab.url);
+
+      console.log(version + 'found at:', sender.tab.url);
     }
   });
