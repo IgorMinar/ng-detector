@@ -1,4 +1,4 @@
-var angularFound = !!(document.querySelector('.ng-scope, ' +
+var angularFound = !!(document.querySelector('.ng-binding, ' +
                                              '[ng-app], [data-ng-app], ' +
                                              '[ng-controller], [data-ng-controller], ' +
                                              '[ng-repeat], [data-ng-repeat]') ||
