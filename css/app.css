@@ -1,0 +1,27 @@
+body {
+  min-width: 450px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border:1px solid black;
+  width:20%;
+}
+
+td {
+  text-align:center;
+}
+
+caption {
+  font-weight:bold
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

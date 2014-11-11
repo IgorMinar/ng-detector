@@ -23,8 +23,14 @@
       "38": "images/icon38.png"
     },
 
+    "default_popup" : "popup.html",
+
     "default_title": "AngularJS Super-Powered"
   },
+
+  "permissions": [
+    "tabs"
+  ],
 
   "web_accessible_resources": [
     "inject.js"
