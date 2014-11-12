@@ -24,7 +24,7 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
                 v.txt +
           "    </td>"+
           "    <td>"+
-                v.url +
+          "      <a target='_blank' href=" + v.url + ">" + v.url +"</a>" +
           "    </td>"+
         "  </tr>";
       }
