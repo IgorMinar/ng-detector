@@ -8,7 +8,7 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
     //build table data for all versions met
     var table = "" +
     "<table class='table-bordered'>"+
-    "  <caption>Angular apps met<caption>" +
+    "  <caption>Browsing history<caption>" +
     "  <th>"+
     "    Version"+
     "  </th>"+
