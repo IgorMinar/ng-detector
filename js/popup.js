@@ -3,7 +3,8 @@
 //get current tab.id
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
     var bkg = chrome.extension.getBackgroundPage(); //get to versions array from background page
-    var versions = bkg.getVersions(); // our custom method in background.js
+    var versions = bkg.getCurrentTabVersion(); // our custom method in background.js, tab.id indexed
+    var allVersions = bkg.getAllVersions(); // our custom method in background.js, normally indexed
 
     //build table data for all versions met
     var table = "" +
@@ -16,18 +17,22 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
     "    Version"+
     "  </th>";
 
-    versions.forEach(function(v){
-      if(!v.duplicate){ //avoid duplicate table entry
-        table += ""+
-        "  <tr>" +
-          "    <td>"+
-          "      <a target='_blank' href=" + v.url + ">" + v.url +"</a>" +
-          "    </td>"+
-          "    <td>"+
-                v.txt +
-          "    </td>"+
-        "  </tr>";
+    allVersions.forEach(function(v){
+      if(v.url === versions[tabs[0].id].url){ //add active class for the current tab version
+        table += "  <tr class='active'>";
       }
+      else {
+        table += "  <tr>";
+      }
+
+      table += "" +
+      "    <td>"+
+      "      <a target='_blank' href=" + v.url + ">" + v.url +"</a>" +
+      "    </td>"+
+      "    <td>"+
+            v.txt +
+      "    </td>"+
+      "  </tr>";
     });
 
     table += "</table>";
