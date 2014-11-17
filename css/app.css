@@ -1,5 +1,5 @@
 body {
-  min-width: 450px;
+  min-width: 550px;
 }
 
 .center-block {
@@ -36,6 +36,11 @@ p {
 .table-bordered td {
   border: 1px solid #ddd;
   padding: 6px;
+}
+
+.table-bordered .active {
+  font-weight: bold;
+  background-color: #f9f9f9;
 }
 
 caption {
