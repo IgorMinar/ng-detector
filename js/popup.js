@@ -10,10 +10,10 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
     "<table class='table-bordered'>"+
     "  <caption>Browsing history<caption>" +
     "  <th>"+
-    "    Version"+
+    "    URL"+
     "  </th>"+
     "  <th>"+
-    "    URL"+
+    "    Version"+
     "  </th>";
 
     versions.forEach(function(v){
@@ -21,10 +21,10 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function(tabs) {
         table += ""+
         "  <tr>" +
           "    <td>"+
-                v.txt +
+          "      <a target='_blank' href=" + v.url + ">" + v.url +"</a>" +
           "    </td>"+
           "    <td>"+
-          "      <a target='_blank' href=" + v.url + ">" + v.url +"</a>" +
+                v.txt +
           "    </td>"+
         "  </tr>";
       }
