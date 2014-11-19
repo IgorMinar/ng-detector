@@ -7,13 +7,13 @@
   "version": "1.2.1",
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content-script.js"]
+      "js": ["js/content-script.js"]
     }
   ],
 
@@ -23,7 +23,7 @@
       "38": "images/icon38.png"
     },
 
-    "default_popup" : "popup.html",
+    "default_popup" : "views/popup.html",
 
     "default_title": "AngularJS Super-Powered"
   },
@@ -33,6 +33,6 @@
   ],
 
   "web_accessible_resources": [
-    "inject.js"
+    "js/inject.js"
   ]
 }
