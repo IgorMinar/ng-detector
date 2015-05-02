@@ -7,15 +7,19 @@
   "version": "1.2.1",
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content-script.js"]
+      "js": ["js/content-script.js"]
     }
   ],
+  
+  "icons": {
+    "128":"images/icon128.png"
+  },
 
   "page_action": {
     "default_icon": {
@@ -23,10 +27,16 @@
       "38": "images/icon38.png"
     },
 
+    "default_popup" : "views/popup.html",
+
     "default_title": "AngularJS Super-Powered"
   },
 
+  "permissions": [
+    "tabs"
+  ],
+
   "web_accessible_resources": [
-    "inject.js"
+    "js/inject.js"
   ]
 }

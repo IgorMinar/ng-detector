@@ -12,7 +12,8 @@
   }
 
   sendMessage({
-    angularVersion: window.angular ? window.angular.version : {}
+    angularVersion: window.angular ? window.angular.version : {},
+    hostname: window.location.hostname
   });
 
   // remove elements from page
