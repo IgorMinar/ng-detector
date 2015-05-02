@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener(
     var versionObject = request.angularVersion;
 
     if (versionObject) {
-      var url = sender.tab.url,
+      var url = request.hostname,
           tabId = sender.tab.id,
           txt = versionObject.codeName
                         ? 'AngularJS ' + versionObject.full + '\n' + versionObject.codeName
