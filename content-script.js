@@ -3,7 +3,10 @@ var angularFound = !!(document.querySelector('.ng-binding, ' +
                                              '[ng-controller], [data-ng-controller], ' +
                                              '[ng-repeat], [data-ng-repeat]') ||
                       document.querySelector('script[src*="angular.js"], ' +
-                                             'script[src*="angular.min.js"]'));
+                                             'script[src*="angular.min.js"]') ||
+                      document.querySelector('script[src*="angular2.dev.js"], ' + 
+                                             'script[src*="angular2.min.js"], ' + 
+                                             'script[src*="angular2.js"]'));
 
 if (angularFound) {
 
