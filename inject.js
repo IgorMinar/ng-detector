@@ -12,7 +12,7 @@
   }
 
   sendMessage({
-    angularVersion: window.angular ? window.angular.version : {}
+    angularVersion: window.angular ? window.angular.version : {'major': 2}
   });
 
   // remove elements from page
